@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: arch-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Build (warnings are visible in the log)
