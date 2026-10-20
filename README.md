@@ -1,6 +1,8 @@
 # mysh
 
-A Unix shell written from scratch in C (~700 lines, no libraries beyond libc).
+[![CI](https://github.com/niniblade/mysh/actions/workflows/ci.yml/badge.svg)](https://github.com/niniblade/mysh/actions/workflows/ci.yml)
+
+A Unix shell written from scratch in C (~770 lines, no libraries beyond libc).
 It supports pipes, redirection, variables, command lists and full job control,
 and it is covered by a 64-case regression suite that also runs under
 AddressSanitizer.
@@ -107,10 +109,14 @@ devlog/                     design notes and bugs
 
 ## Devlog
 
-- [002: Building a shell](devlog/002-building-a-shell.md): the core: REPL,
-  fork/exec, pipes, redirection, job control, and the classic pipe and leak bugs
-- [003: Variables, lists and a bug hunt](devlog/003-variables-lists-and-a-bug-hunt.md):
-  adding variables, `&&`/`||`, fd redirection, and fixing what broke
+The project is documented as a series, in the order it was built:
+
+| Post | What it covers |
+|---|---|
+| [000: The plan](devlog/000-the-plan.md) | Why build an OS, what "from scratch" means, and the roadmap |
+| [001: Planning the shell](devlog/001-planning-the-shell.md) | The six build steps, design decisions and project setup |
+| [002: Building a shell](devlog/002-building-a-shell.md) | REPL, fork/exec, pipes, redirection, job control, and the classic pipe and leak bugs |
+| [003: Variables, lists and a bug hunt](devlog/003-variables-lists-and-a-bug-hunt.md) | Variables, `&&`/`\|\|`, fd redirection, and fixing what broke |
 
 ## Limitations
 
