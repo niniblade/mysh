@@ -53,7 +53,7 @@ mysh> cd /tmp && echo $PWD
 Requires `gcc` (or any C compiler) and `make` on Linux or macOS.
 
 ```sh
-git clone https://github.com/YOUR-USERNAME/mysh.git
+git clone https://github.com/niniblade/mysh.git
 cd mysh
 make
 ./mysh
