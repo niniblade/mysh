@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: arch-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (warnings are visible in the log)
+        run: make
+      - name: Run test suite
+        run: make test
+      - name: Run test suite under AddressSanitizer + UBSan
+        run: make test-asan
